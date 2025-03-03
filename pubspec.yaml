@@ -1,0 +1,111 @@
+name: chatbot_app
+description: Application Mobile du chatbot d'assistance aux paiements et transactions de la plateforme Kratos Payments 
+version: 1.0.0+1
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_image_slideshow: any
+  flutter_svg: ^1.1.6
+  cached_network_image: ^3.2.1
+  country_pickers: ^2.0.0
+  intl: 0.17.0
+  connectivity_plus: ^4.0.1
+  image_picker: ^0.8.1
+  email_validator: ^2.0.1
+  fluttertoast: ^8.0.8
+  swipe_to: 1.0.5
+  shared_preferences: ^2.0.15
+  toggle_switch: ^2.1.0
+  http: ^0.13.5
+  reflectable: any
+  scroll_to_index: ^3.0.1
+  flutter_easyloading: ^3.0.5
+  select_form_field: ^2.2.0
+  getwidget: ^3.0.1
+  permission_handler: ^6.1.1
+  flutter_local_notifications: ^16.1.0
+  open_file: ^3.3.2
+  cupertino_icons: ^1.0.2
+  share_plus: ^7.2.2
+  sqflite: ^2.2.8+4
+  sqflite_common_ffi_web: any
+  positioned_scroll_observer: ^2.2.2
+  path: ^1.8.2
+  url_launcher: ^6.1.11
+  flutter_staggered_grid_view: ^0.7.0
+  flutter_launcher_icons: ^0.13.1
+  scrollable_positioned_list: ^0.3.8
+  path_provider: ^2.1.1
+  webview_flutter: ^4.4.1
+  file_picker: ^5.3.1
+  package_info_plus: ^4.0.1
+  calendar_date_picker2: ^0.5.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_gen_runner:
+
+
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/logo_no_text.png"
+  web:
+    generate: true
+    image_path: "assets/images/logo_no_text.png"
+    background_color: "#fff"
+    theme_color: "#fff"
+  windows:
+    generate: true
+    image_path: "assets/images/logo_no_text.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "assets/images/logo_no_text.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/images/
+
+  fonts:
+    - family: Aclonica
+      fonts:
+        - asset: assets/fonts/Aclonica-Regular.ttf
+          weight: 400
+
+    - family: Arimo Hebrew Subset
+      fonts:
+        - asset: assets/fonts/ArimoHebrewSubsetRegular.ttf
+          weight: 400
+        - asset: assets/fonts/ArimoHebrewSubsetBold.ttf
+          weight: 700
+    - family: Baloo Bhai
+      fonts:
+        - asset: assets/fonts/BalooBhaiRegular.ttf
+          weight: 400
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+    - family: Stream
+      fonts:
+        - asset: assets/fonts/PlayfairDisplay-Regular.ttf
+          weight: 400
+
+flutter_gen:
+  output: lib/generated/
+  line_length: 120
