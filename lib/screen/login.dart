@@ -260,14 +260,14 @@ class _loginState extends State<Login> with TickerProviderStateMixin {
     if (emailValid && pwdText.value.toString().isNotEmpty) {
       Token? tokenFromAPI;
       API.login(emailText.text.toString().trim(), pwdText.text.toString()).then((response) async => {
-        // log(response.body),
+        log(response.body),
         if (response.statusCode == 200 || response.statusCode==201)
           {
-            tokenFromAPI = Token.fromJson(jsonDecode(response.body)),
+            tokenFromAPI = Token.fromJson(json.decode(response.body)),
             tokenFromAPI!.time = DateTime.now().millisecondsSinceEpoch / 1000 + (3600 * 24),
             tokenFromAPI!.password = pwdText.text.toString(),
             tokenFromAPI!.email = emailText.text.toString().trim(),
-            // print(tokenFromAPI!.toJson().toString()),
+            print(tokenFromAPI!.toJson().toString()),
             await saveKey('token', tokenFromAPI!.toJson().toString()),
 
             // await API.getToken().then((value) => {

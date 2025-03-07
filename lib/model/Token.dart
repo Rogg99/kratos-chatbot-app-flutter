@@ -18,11 +18,11 @@ class Token {
 
   factory Token.fromJson(Map<String, dynamic> json) {
     return Token(
-      email: json['email'],
-      password: json['password'],
+      email: json['email']??'',
+      password: json['password']??'',
       refresh: json['refresh'],
       access: json['access'],
-      time: json['time'],
+      time: json['time']??0,
     );
   }
 

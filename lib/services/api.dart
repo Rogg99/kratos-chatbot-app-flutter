@@ -24,8 +24,8 @@ import 'package:sqflite_common_ffi_web/sqflite_ffi_web.dart';
 
 
 class Api {
-  String Api_ = '192.168.1.162:7898/chatbot/api/v1/chat/'; // The Chatbot API BASE URL
-  String userApi_ = "https://192.168.1.162:454/kratos-payment/api/v1/auth";  // The Payment Athentication API BASE URL
+  String Api_ = 'http://195.26.244.215:7898/chatbot/api/v1/chat/'; // The Chatbot API BASE URL
+  String userApi_ = "https://195.26.244.215:454/kratos-payment/api/v1/auth";  // The Payment Athentication API BASE URL
   late String authorization = "Bearer ";
 
 
@@ -96,7 +96,7 @@ class Api {
     );
     var body = message.toJson();
     log(body.toString());
-    var url = Uri.parse('http://$Api_'+'send-message/');
+    var url = Uri.parse('$Api_'+'send-message/');
     var headers = {"Content-Type": "application/json", "Authorization": authorization};
     return http.post(url, headers: headers, body: body).then((http.Response response) {
       return response;
@@ -107,10 +107,11 @@ class Api {
     authorization = await getToken().then((value) =>
     'Bearer ' + value!.access
     );
-    var url = Uri.parse('http://$Api_'+'start-session/');
-    // var url = Uri.http('$Api_', 'start-session/');
+    log(authorization.toString());
+    var url = Uri.parse('$Api_'+'start-session/');
     var headers = {"Content-Type": "application/json", "Authorization": authorization};
 
+    log(url.toString());
     return http.post(url, headers: headers).then((http.Response response) {
       return response;
     });

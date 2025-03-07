@@ -280,7 +280,7 @@ class Chat_ extends State<ChatView>  with TickerProviderStateMixin{
         toast('Echec de la connexion au serveur !!',color: Colors.red)
       }
     }).onError((error, stackTrace) => {
-      // dev.log('Chatbot DEBUG: '+stackTrace.toString()),
+      dev.log('Chatbot DEBUG: '+stackTrace.toString()),
       toast('Echec de la connexion au serveur !!',color: Colors.red)
     });
     loading = false;
